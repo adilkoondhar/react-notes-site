@@ -1,4 +1,7 @@
 import React from "react";
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
+import Zoom from '@mui/material/Zoom';
 
 function CreateArea(props) {
   const [note, setNote] = React.useState({
@@ -26,12 +29,21 @@ function CreateArea(props) {
     event.preventDefault();
   }
 
+  const [inputExpand, setInputExpand] = React.useState(false);
+  function handleClick() {
+    setInputExpand(true);
+  }
+
   return (
     <div>
-      <form>
-        <input name="title" placeholder="Title" onChange={handleChange} value={note.title} />
-        <textarea name="content" placeholder="Take a note..." rows="3" onChange={handleChange} value={note.content} />
-        <button onClick={submitNote} >Add</button>
+      <form className="create-note">
+        {inputExpand && (<input name="title" placeholder="Title" onChange={handleChange} value={note.title} />)}
+        <textarea name="content" placeholder="Take a note..." rows={inputExpand ? 3 : 1} onChange={handleChange} onClick={handleClick} value={note.content} />
+          <Zoom in={inputExpand}>
+            <Fab onClick={submitNote}>
+              <AddIcon />
+            </Fab>
+          </Zoom>
       </form>
     </div>
   );
