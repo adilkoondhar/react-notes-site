@@ -4,3 +4,7 @@ React Notes Site is a practice project inspired by the popular Google Keep app. 
 ## Features
 - **Create Notes:** Users can easily create new notes with a title and content.
 - **Delete Notes:** Notes can be deleted effortlessly, providing a clean and intuitive user interface.
+
+## Technologies Used
+- **React:** The project is built using the React library for building user interfaces.
+- **CSS:** Custom styling is implemented using CSS to create an aesthetically pleasing and responsive design.
