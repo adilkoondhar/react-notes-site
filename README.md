@@ -12,3 +12,4 @@ React Notes Site is a practice project inspired by the popular Google Keep app. 
 - **npm:** The default package manager for Node.js, facilitating easy dependency management.
 - **Nodejs:** This powerful backend technology seamlessly manages data, ensuring the security and accessibility.
 - **Mui icons:** SVG Material Design icons as React components.
+- **JavaScript:** A versatile scripting language used for building interactive web pages.
